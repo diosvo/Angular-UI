@@ -35,6 +35,10 @@ export abstract class Configs {
       name: 'Expandable Floating Menu',
       routerLink: '/all-thing-about/button/expandable-floating-menu'
     },
+    {
+      name: 'Minimal Questionnaire App',
+      routerLink: '/web-app/minimal-questionnaire'
+    },    
   ]
 
   public static navList = [
