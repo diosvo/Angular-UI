@@ -1,1 +1,60 @@
-<p>minimal-questionnaire works!</p>
+<div class="main">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo" #logo>
+            <h3>Dios Vo</h3>
+        </div>
+
+        <ul class="menu" #menu>
+            <li class="menu__item"><a class="menu__link active">Menu 1</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 2</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 3</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 4</a></li>
+            <li class="menu__item"><a class="menu__link">Menu 5</a></li>
+        </ul>
+
+        <div class="search" #search>
+            <button class="search-icon">
+                <svg class="icon icon-search w-32 h-32">
+                    <use href="../../../assets/svg/icons.svg#icon-search"></use>
+                </svg>
+            </button>
+            <button class="call">Get In Touch</button>
+        </div>
+    </div>
+
+    <!-- Questionnaire -->
+    <div class="questionnaire">
+        <div class="question" #questionContainer>
+            <h3 class="question__heading"></h3>
+            <div class="question__q"></div>
+            <div class="question__answer" #answer>
+                <div class="answer"></div>
+            </div>
+        </div>
+
+        <div class="actions" #actions>
+            <button class="previous">
+                <svg class="icon icon-back w-50 h-50">
+                    <use href="../../../assets/svg/icons.svg#icon-chevron-small-left"></use>
+                </svg>
+            </button>
+            <button class="Next">Next</button>
+        </div>
+
+        <div class="progress__bar" #slider>
+            <div class="progress__bar--slider" #progress></div>
+        </div>
+
+        <div class="progress__actions" #progress>
+            <div class="p__actions-left">
+                <span>Step</span>
+                <span>Out of</span>
+            </div>
+            <div class="p__actions-right">
+                <span>Step</span>
+                <span>Out of</span>
+            </div>
+        </div>
+    </div>
+</div>
