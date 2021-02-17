@@ -36,4 +36,8 @@
             @include border-radius(32);
         }
     }
+
+    &-color-gray {
+        background-color: #DDD;
+    }
 }

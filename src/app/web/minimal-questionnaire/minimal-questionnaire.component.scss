@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.main {
+    font-family     : 'Poppins', sans-serif;
+    background-color: #fff;
+    margin          : 1rem 4rem;
+    border-radius   : 1.5rem;
+
+    .header {
+        font-weight: bold;
+        padding    : 2rem 4rem;
+        cursor     : pointer;
+
+        .logo {
+            font-size: 15px;
+            flex     : 1;
+
+            h3 {
+                display: inline-block;
+                outline: none;
+            }
+
+            h3:hover {
+                transform: scale(1.2);
+                transition: all .3s ease-in;
+            }
+        }
+
+        .menu {
+            flex           : 2;
+            justify-content: center;
+        }
+
+        .menu__link {
+            font-size     : 13px;
+            text-transform: uppercase;
+            padding       : 0.5rem 0;
+            margin        : 0 1.25rem;
+
+            &:hover {
+                cursor    : pointer;
+                opacity   : 0.8;
+                transition: all .2s ease-in;
+            }
+        }
+
+        .active {
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .search {
+            flex           : 1;
+            justify-content: flex-end;
+
+            button {
+                background: none;
+                border    : 1px solid #ddd;
+            }
+
+            &-icon {
+                padding      : 0.25rem 0.35rem;
+                border-radius: 50%;
+
+                svg.icon {
+                    width : 15px;
+                    height: 15px;
+                }
+            }
+
+            .call {
+                margin-left   : 1rem;
+                font-weight   : bold;
+                font-size     : 12px;
+                text-transform: uppercase;
+                padding       : 0.25rem 0.5rem;
+                border-radius : 1rem;
+            }
+        }
+    }
+
+    .questionnaire {
+        padding       : 4rem;
+        display       : flex;
+        flex-direction: column;
+
+        div {
+            margin: 0 auto;
+        }
+
+        .question {
+            &__heading {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

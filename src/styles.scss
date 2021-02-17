@@ -8,8 +8,12 @@
     margin : 0;
 }
 
-body {
+html {
     box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
     font-size : calc(0.75em + 1vmin);
 
     font-family     : 'Roboto', sans-serif;
