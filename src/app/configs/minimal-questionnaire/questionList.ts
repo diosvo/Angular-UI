@@ -3,7 +3,7 @@ import { Question } from 'src/app/models/minimal-questionnaire';
 export const questionList: Question[] = [
     {
         id: 1,
-        questionText: 'What is you skill level?',
+        questionText: 'What is your estimate skill level ?',
         options: [
             { text: 'Beginner' },
             { text: 'Experience' },

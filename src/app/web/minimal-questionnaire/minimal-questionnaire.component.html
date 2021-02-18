@@ -26,14 +26,30 @@
     <!-- Questionnaire -->
     <div class="questionnaire">
         <!-- Question Header -->
-        <div class="question" #questionContainer>
-            <h3 class="question__heading">Question 2</h3>
-            <div class="question__q mt-1">What is your estimate skill level?</div>
-            <div class="question__answer bd-auto my-4" #answer>
-                <div class="question__answer--img w-40 h-40">
-                    <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+        <div class="question" *ngFor="let item of questionList; let i = index"  #questionContainer>
+            <h3 class="question__heading">Question {{item.id}}</h3>
+            <div class="question__q mt-1">{{item.questionText}}</div>
+            <div class="question__answers--container d-flex my-4">
+                <div class="question__answers bd-auto"  #answer>
+                    <div class="question__answers--img w-40 h-40">
+                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+                    </div>
+                    <div class="answer f-16">{{item.options[i].text}}</div>
                 </div>
-                <div class="answer f-16">Beginner</div>
+
+                <div class="question__answers bd-auto"  #answer>
+                    <div class="question__answers--img w-40 h-40">
+                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+                    </div>
+                    <div class="answer f-16">{{item.options[i].text}}</div>
+                </div>
+
+                <div class="question__answers bd-auto"  #answer>
+                    <div class="question__answers--img w-40 h-40">
+                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+                    </div>
+                    <div class="answer f-16">{{item.options[i].text}}</div>
+                </div>
             </div>
         </div>
 
@@ -48,7 +64,7 @@
         </div>
 
         <!-- Progress -->
-        <div class="progress__bar bd-auto mt-4 mb-2" #slider>
+        <div class="progress__bar bd-auto mt-8 mb-1" #slider>
             <div class="progress__bar--slider bd-auto" #progress></div>
         </div>
 

@@ -3,12 +3,14 @@
 .main {
     font-family     : 'Poppins', sans-serif;
     background-color: #fff;
-    margin          : 1rem 4rem;
+    margin          : 3rem 4rem;
     border-radius   : 1.5rem;
+    box-shadow      : var(--hover-light-shadow);
+
+    height: calc(100vh - 6rem);
 
     .header {
-        font-weight: bold;
-        padding    : 2rem 4rem;
+        padding    : 2rem 6rem;
         cursor     : pointer;
 
         .logo {
@@ -29,24 +31,28 @@
         .menu {
             flex           : 2;
             justify-content: center;
-        }
 
-        .menu__link {
-            font-size     : 13px;
-            text-transform: uppercase;
-            padding       : 0.5rem 0;
-            margin        : 0 1.25rem;
+            &__link,
+            &__link:active,
+            &__link:link {
+                font-size     : 13px;
+                text-transform: uppercase;
+                padding       : 0.5rem 0;
+                margin        : 0 1.25rem;
+    
+                &:hover {
+                    cursor    : pointer;
+                    opacity   : 0.8;
+                    transition: all .2s ease-in;
+                }
+            }
 
-            &:hover {
-                cursor    : pointer;
-                opacity   : 0.8;
-                transition: all .2s ease-in;
+            &__link.active {
+                font-weight: bold;
+                border-top: 3px solid var(--primary-color);
             }
         }
 
-        .active {
-            border-top: 3px solid var(--primary-color);
-        }
 
         .search {
             flex           : 1;
@@ -79,7 +85,7 @@
     }
 
     .questionnaire {
-        padding       : 3.75rem;
+        padding       : 4rem 6rem 0;
         display       : flex;
         flex-direction: column;
         align-items   : center;
@@ -87,18 +93,29 @@
 
         .question {
             &__heading {
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             &__q {
-                font-size: 15px;
+                font-size: 16px;
             }
 
-            &__answer {
+            &__answers {
+
+                /* 
+                [
+                    view width - 5rem (main's margin) 
+                    - 6rem (questionnaire's padding) 
+                    + 2rem (:nth-child(2)'s margin)
+                ]
+                    / 3 (3 options answer)
+                */
+
+                width          : calc(((100vw - 10rem) - (6rem * 2 + 2rem)) / 3);
                 display        : flex;
                 flex-direction : column;
                 align-items    : center;
-                justify-content: space-between;
+                justify-content: center;
                 border         : 1px solid #ddd;
 
                 &--img {
@@ -106,13 +123,23 @@
                 }
 
                 .answer {
-                    padding-bottom: 1.75rem;
+                    padding-bottom: 1rem;
+
+                    &.selected {
+                        border          : 1px solid var(--primary-color);
+                        background-color: var(--primary-color);
+                        color           : white;
+                    }
+                }
+
+                &:nth-child(even) {
+                    margin: 0 1rem;
                 }
 
                 &:hover {
                     border          : 1px solid var(--primary-color);
                     background-color: var(--primary-color);
-                    transition      : background-color .3s ease-in-out;
+                    transition      : all .3s ease-in-out;
                     cursor          : pointer;
 
                     .answer {
@@ -136,35 +163,31 @@
             button.next {
                 background-color: var(--primary-color);
                 color           : white;
-                width           : 9rem;
-                margin-left     : 0.75rem;
+                padding         : 0 4rem;
+                margin-left     : 1rem;
             }
         }
 
         .progress {
             &__bar {
-                position        : relative;
-                width           : 295px;
+                width           : calc(((100vw - 10rem) - (6rem * 2 + 2rem)) / 3);
                 height          : 10px;
                 background-color: #F5F6FA;
 
                 &--slider {
-                    width : 50%;
-                    height: 100%;
-                    top   : 0;
-                    left  : 0;
-
-                    position        : absolute;
+                    width : 0%;
+                    height: inherit;
                     background-color: var(--primary-color);
                 }
             }
 
             &__actions {
-                width          : 295px;
+                width          : calc(((100vw - 10rem) - (6rem * 2 + 2rem)) / 3);
                 display        : flex;
                 justify-content: space-between;
+                text-transform : uppercase;
                 font-weight    : bold;
-                font-size      : 13px;
+                font-size      : 11px;
                 color          : var(--color-grey);
             }
         }
