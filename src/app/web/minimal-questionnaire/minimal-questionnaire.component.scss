@@ -21,7 +21,7 @@
             }
 
             h3:hover {
-                transform: scale(1.2);
+                transform : scale(1.2);
                 transition: all .3s ease-in;
             }
         }
@@ -79,17 +79,93 @@
     }
 
     .questionnaire {
-        padding       : 4rem;
+        padding       : 3.75rem;
         display       : flex;
         flex-direction: column;
-
-        div {
-            margin: 0 auto;
-        }
+        align-items   : center;
+        text-align    : center;
 
         .question {
             &__heading {
                 font-size: 1.5rem;
+            }
+
+            &__q {
+                font-size: 15px;
+            }
+
+            &__answer {
+                display        : flex;
+                flex-direction : column;
+                align-items    : center;
+                justify-content: space-between;
+                border         : 1px solid #ddd;
+
+                &--img {
+                    padding: 1.75rem 0;
+                }
+
+                .answer {
+                    padding-bottom: 1.75rem;
+                }
+
+                &:hover {
+                    border          : 1px solid var(--primary-color);
+                    background-color: var(--primary-color);
+                    transition      : background-color .3s ease-in-out;
+                    cursor          : pointer;
+
+                    .answer {
+                        font-weight: bold;
+                        color      : white;
+                    }
+                }
+            }
+        }
+
+        .actions {
+            button.previous {
+                background-color: white;
+                border          : 1px solid #ddd;
+
+                .icon {
+                    fill: var(--primary-color);
+                }
+            }
+
+            button.next {
+                background-color: var(--primary-color);
+                color           : white;
+                width           : 9rem;
+                margin-left     : 0.75rem;
+            }
+        }
+
+        .progress {
+            &__bar {
+                position        : relative;
+                width           : 295px;
+                height          : 10px;
+                background-color: #F5F6FA;
+
+                &--slider {
+                    width : 50%;
+                    height: 100%;
+                    top   : 0;
+                    left  : 0;
+
+                    position        : absolute;
+                    background-color: var(--primary-color);
+                }
+            }
+
+            &__actions {
+                width          : 295px;
+                display        : flex;
+                justify-content: space-between;
+                font-weight    : bold;
+                font-size      : 13px;
+                color          : var(--color-grey);
             }
         }
     }

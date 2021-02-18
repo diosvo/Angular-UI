@@ -25,35 +25,41 @@
 
     <!-- Questionnaire -->
     <div class="questionnaire">
+        <!-- Question Header -->
         <div class="question" #questionContainer>
             <h3 class="question__heading">Question 2</h3>
-            <div class="question__q"></div>
-            <div class="question__answer" #answer>
-                <div class="answer"></div>
+            <div class="question__q mt-1">What is your estimate skill level?</div>
+            <div class="question__answer bd-auto my-4" #answer>
+                <div class="question__answer--img w-40 h-40">
+                    <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+                </div>
+                <div class="answer f-16">Beginner</div>
             </div>
         </div>
 
-        <div class="actions" #actions>
-            <button class="previous">
-                <svg class="icon icon-back w-50 h-50">
+        <!-- Main Actions -->
+        <div class="actions d-flex" #actions>
+            <button class="previous d-flex bd-auto">
+                <svg class="icon icon-back w-32 h-32">
                     <use href="../../../assets/svg/icons.svg#icon-chevron-small-left"></use>
                 </svg>
             </button>
-            <button class="Next">Next</button>
+            <button class="next bd-auto">Next</button>
         </div>
 
-        <div class="progress__bar" #slider>
-            <div class="progress__bar--slider" #progress></div>
+        <!-- Progress -->
+        <div class="progress__bar bd-auto mt-4 mb-2" #slider>
+            <div class="progress__bar--slider bd-auto" #progress></div>
         </div>
 
         <div class="progress__actions" #progress>
             <div class="p__actions-left">
-                <span>Step</span>
-                <span>Out of</span>
+                <span>Step 2</span>
+                <span> Out of 3</span>
             </div>
             <div class="p__actions-right">
-                <span>Step</span>
-                <span>Out of</span>
+                <span>50</span>
+                <span>%</span>
             </div>
         </div>
     </div>
