@@ -1,74 +1,69 @@
-<div class="main">
+<div class="main bg-white m-3 bd-auto hover-bs-light">
     <!-- Header -->
-    <div class="header d-flex">
-        <div class="logo" #logo>
-            <h3 routerLink="/home">DV021.</h3>
+    <div class="header d-flex text-transform-uppercase px-12 py-4">
+        <div class="logo flex-1 f-15" #logo>
+            <h3 class="d-inline-block outline-none cursor-pointer default-transition" routerLink="/home">DV021.</h3>
         </div>
 
-        <ul class="menu d-flex" #menu>
-            <li class="menu__item"><a class="menu__link active">Menu 1</a></li>
-            <li class="menu__item"><a class="menu__link">Menu 2</a></li>
-            <li class="menu__item"><a class="menu__link">Menu 3</a></li>
-            <li class="menu__item"><a class="menu__link">Menu 4</a></li>
-            <li class="menu__item"><a class="menu__link">Menu 5</a></li>
+        <ul class="menu d-flex flex-2 jc-center" #menu>
+            <li class="menu__item"><a class="menu__link f-13 py-1 mx-3 default-transition hover-opacity active">Menu
+                    1</a></li>
+            <li class="menu__item"><a class="menu__link f-13 py-1 mx-3 default-transition hover-opacity">Menu
+                    2</a></li>
+            <li class="menu__item"><a class="menu__link f-13 py-1 mx-3 default-transition hover-opacity">Menu
+                    3</a></li>
+            <li class="menu__item"><a class="menu__link f-13 py-1 mx-3 default-transition hover-opacity">Menu
+                    4</a></li>
+            <li class="menu__item"><a class="menu__link f-13 py-1 mx-3 default-transition hover-opacity">Menu
+                    5</a></li>
         </ul>
 
-        <div class="search d-flex" #search>
-            <button class="search-icon">
-                <svg class="icon icon-search">
+        <div class="search d-flex flex-1 jc-flex-end" #search>
+            <button class="search-icon bg-none bd-gray bd-circle">
+                <svg class="icon icon-search w-15 h-15">
                     <use href="../../../assets/svg/icons.svg#icon-search"></use>
                 </svg>
             </button>
-            <button class="call">Get In Touch</button>
+            <button class="call bg-none bd-gray bd-radius-16 f-12 fw-bold text-transform-uppercase ml-2">Get In
+                Touch</button>
         </div>
     </div>
 
     <!-- Questionnaire -->
-    <div class="questionnaire">
+    <div class="questionnaire d-flex flex-direction-column ai-center text-center mt-4 mx-12 mb-0">
         <!-- Question Header -->
-        <div class="question" *ngFor="let item of questionList; let i = index"  #questionContainer>
-            <h3 class="question__heading">Question {{item.id}}</h3>
-            <div class="question__q mt-1">{{item.questionText}}</div>
+        <div class="question" *ngFor="let item of questionList; let i = index" #questionContainer>
+            <h3 class="question__heading f-32">Question {{item.id}}</h3>
+            <div class="question__q f-16 mt-1">{{item.questionText}}</div>
             <div class="question__answers--container d-flex my-4">
-                <div class="question__answers bd-auto"  #answer>
-                    <div class="question__answers--img w-40 h-40">
-                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
+                <div class="question__answers d-flex flex-direction-column jc-center ai-center answers-width bd-gray bd-auto default-transition cursor-pointer"
+                    #answer>
+                    <div class="question__answers--img w-40 h-40 my-3">
+                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image"
+                            width="100%">
                     </div>
-                    <div class="answer f-16">{{item.options[i].text}}</div>
-                </div>
-
-                <div class="question__answers bd-auto"  #answer>
-                    <div class="question__answers--img w-40 h-40">
-                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
-                    </div>
-                    <div class="answer f-16">{{item.options[i].text}}</div>
-                </div>
-
-                <div class="question__answers bd-auto"  #answer>
-                    <div class="question__answers--img w-40 h-40">
-                        <img src="../../../assets/images/minimal-questionnaire/circle.png" alt="answer image" width="100%">
-                    </div>
-                    <div class="answer f-16">{{item.options[i].text}}</div>
+                    <div class="answer f-16 mb-3">{{item.options[i].text}}</div>
                 </div>
             </div>
         </div>
 
         <!-- Main Actions -->
         <div class="actions d-flex" #actions>
-            <button class="previous d-flex bd-auto">
-                <svg class="icon icon-back w-32 h-32">
+            <button class="previous d-flex bg-white bd-auto bd-gray">
+                <svg class="icon icon-back w-32 h-32 icon-primary-color">
                     <use href="../../../assets/svg/icons.svg#icon-chevron-small-left"></use>
                 </svg>
             </button>
-            <button class="next bd-auto">Next</button>
+            <button class="next bg-primary bd-auto text-white px-8 ml-2">Next</button>
         </div>
 
         <!-- Progress -->
-        <div class="progress__bar bd-auto mt-8 mb-1" #slider>
-            <div class="progress__bar--slider bd-auto" #progress></div>
+        <div class="progress__bar h-10 answers-width bg-light bd-auto mt-4 mb-1" #slider>
+            <div class="progress__bar--slider height-inherit bg-primary bd-auto" #progress></div>
         </div>
 
-        <div class="progress__actions" #progress>
+        <div class="progress__actions d-flex jc-between answers-width f-11 text-gray text-transform-uppercase fw-bold"
+            #progress>
             <div class="p__actions-left">
                 <span>Step 2</span>
                 <span> Out of 3</span>

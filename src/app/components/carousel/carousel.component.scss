@@ -35,7 +35,3 @@ button.next {
     @extend %buttonStyles;
     right: 5%;
 }
-
-button:hover .icon {
-    opacity: .8;
-}
