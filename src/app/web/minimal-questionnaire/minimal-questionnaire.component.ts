@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { questionList } from 'src/app/configs/minimal-questionnaire/questionList';
+import { Question } from 'src/app/models/minimal-questionnaire';
 
 @Component({
   selector: 'app-minimal-questionnaire',
@@ -7,11 +8,22 @@ import { questionList } from 'src/app/configs/minimal-questionnaire/questionList
   styleUrls: ['./minimal-questionnaire.component.scss']
 })
 export class MinimalQuestionnaireComponent implements OnInit {
-  questionList = Array(questionList[0])
+  currentQuestionIndex: number = 0;
+  progressValue: number = 0
+  questionList = questionList
+
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.questionList)
+  ngOnInit(): void {}
+
+  get question(): Question {
+    return this.questionList[this.currentQuestionIndex]
   }
+
+  onSelect(ans: HTMLDivElement): void { }
+
+  onPrev(): void {}
+
+  onNext(): void {}
 
 }
