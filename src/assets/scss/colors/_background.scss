@@ -2,12 +2,17 @@
     --bg-white   : #FFFFFF;
     --bg-black   : #000000;
     --bg-lavender: lavender;
+    --bg-light   : #F5F6FA;
     --body-color : #F0F2F5;
 }
 
 .bg {
     &-none {
         background: none;
+    }
+
+    &-light {
+        background-color: var(--bg-light);
     }
 
     &-white {

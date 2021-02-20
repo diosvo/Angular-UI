@@ -28,6 +28,10 @@
             @include border-radius(12);
         }
 
+        &-16 {
+            @include border-radius(16);
+        }
+
         &-25 {
             @include border-radius(25);
         }
@@ -37,7 +41,7 @@
         }
     }
 
-    &-color-gray {
-        background-color: #DDD;
+    &-gray {
+        border: 1px solid #DDD;
     }
 }

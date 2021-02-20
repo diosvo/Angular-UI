@@ -29,6 +29,10 @@
         @include height-px(10);
     }
 
+    &-15 {
+        @include height-px(15);
+    }
+
     &-25 {
         @include height-px(25);
     }

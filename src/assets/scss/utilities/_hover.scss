@@ -1,0 +1,31 @@
+%cursorPointer {
+    cursor: pointer;
+}
+
+.hover {
+
+    &-opacity:hover,
+    &-opacity:link,
+    &-opacity:active {
+        @extend %cursorPointer;
+        opacity: 0.8;
+    }
+
+    &-bold:hover {
+        font-weight: bold;
+    }
+
+    &-color-white:hover {
+        color: var(--text-white);
+    }
+
+    &-bs-light {
+        box-shadow: var(--hover-light-shadow);
+    }
+}
+
+button:hover {
+    @extend %cursorPointer;
+    transition: all .2s ease-in;
+    box-shadow: var(--hover-light-shadow);
+}

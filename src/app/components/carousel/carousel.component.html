@@ -13,13 +13,13 @@
                 {{item.title}}</figcaption>
         </figure>
     </div>
-    <button class="prev" [disabled]="prevSlideFinished || isAnimating"
+    <button class="prev hover-opacity" [disabled]="prevSlideFinished || isAnimating"
         [ngStyle]="prevSlideFinished && {cursor: 'not-allowed'}" (click)="onPrev()">
         <svg class="icon icon-dark position-absolute w-50 h-50">
             <use href="../../../assets/svg/icons.svg#icon-chevron-with-circle-left"></use>
         </svg>
     </button>
-    <button class="next" [disabled]="middleIndex <= 1" [ngStyle]="middleIndex <= 1 && {cursor: 'not-allowed'}"
+    <button class="next hover-opacity" [disabled]="middleIndex <= 1" [ngStyle]="middleIndex <= 1 && {cursor: 'not-allowed'}"
         (click)="onNext()">
         <svg class="icon icon-dark position-absolute w-50 h-50">
             <use href="../../../assets/svg/icons.svg#icon-chevron-with-circle-right"></use>
