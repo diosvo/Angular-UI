@@ -53,13 +53,9 @@
                 ] / 3 (3 options answer)
                 */
 
-                .answer {
-                    &.selected {
-                        color           : white;
-                        background-color: var(--primary-color);
-
-                        border: 1px solid var(--primary-color);
-                    }
+                .answer.selected {
+                    color           : var(--color-red);
+                    font-weight : bold;
                 }
 
                 &:nth-child(even) {
