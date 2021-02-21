@@ -11,6 +11,11 @@
 
     --hr  : #DADDE1;
     --line: #CCCCCC;
+
+    @extend %textColor;
+    @extend %iconColor;
+    @extend %bsColor;
+    @extend %bgColor;
 }
 
 @import './background', './box-shadow', './icon', './text'
